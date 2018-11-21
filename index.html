@@ -1,0 +1,43 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table {
+			  margin:1em auto;
+			}
+			td {
+			  height:30px;
+			  width:30px;
+			  border:1px solid;
+			  text-align:center;
+			}
+			input[type='number'] {
+				-moz-appearance:textfield;
+				width: 20px;
+			}
+
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+		</style>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<form>
+		<select>
+		  <option value="4" onclick="renderInputTable (value, 'original')">2 X 2</option>
+		  <option value="9" onclick="renderInputTable (value, 'original')">3 X 3</option>
+		  <option value="16" onclick="renderInputTable (value, 'original')">4 X 4</option>
+		</select>
+		</form>
+		<form name= "inputTable" onsubmit="solveSudoku(); return false">
+		<table id="original" style="align:left">
+		</table>
+		<input type="submit"/>
+		</form>
+		<table id="solved" style="align:right">
+		</table>
+		<script src="script/script.js"></script>
+	</body>
+</html>
